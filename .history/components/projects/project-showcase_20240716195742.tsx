@@ -226,12 +226,12 @@ export const MobileProjectShowcase = () => {
             try {
                 const response: GitHubResponse = await axios.get(`https://api.github.com/repos/nickgoel31/${repo}/commits`, {
                     headers: {
-                        Authorization: `token ${process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN}`
+                        Authorization: `token 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`
                     }
                 });
                 const responseTwo: GitHubResponse = await axios.get(`https://api.github.com/repos/nickgoel31/${repo}/contents`, {
                     headers: {
-                        Authorization: `token ${process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN}`
+                        Authorization: `token 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`
                     }
                 });
                 if (!response || !responseTwo) return;
