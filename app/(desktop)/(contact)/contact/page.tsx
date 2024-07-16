@@ -2,6 +2,7 @@
 
 import { Linkedin, Mail } from 'lucide-react'
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react'
 import { FaSquareUpwork } from "react-icons/fa6";
 
@@ -30,22 +31,22 @@ const ContactPage = () => {
         </div>
 
         <div className='absolute w-full h-full top-0 left-0 font-medium text-[#7aafc5]'>
-            <button className='absolute top-[35%] left-[25%] -translate-x-[50%] -translate-y-[50%] rounded-full p-3 px-6 border border-[#274552] bg-[#0e171b] flex items-center justify-center gap-2 transition-custom hover:border-[#89bcd2] hover:bg-[#89bcd2] hover:shadow-contactLinks hover:text-[#0e171b]' style={{transform: `translate(calc(${translateXState}px - 50%), ${translateYState}px)`}}>
+            <Link href={'https://www.linkedin.com/in/harsh-goel-cs'} className='absolute top-[35%] left-[25%] -translate-x-[50%] -translate-y-[50%] rounded-full p-3 px-6 border border-[#274552] bg-[#0e171b] flex items-center justify-center gap-2 transition-custom hover:border-[#89bcd2] hover:bg-[#89bcd2] hover:shadow-contactLinks hover:text-[#0e171b]' style={{transform: `translate(calc(${translateXState}px - 50%), ${translateYState}px)`}}>
                 <Linkedin size={20}/>
                 Linkedin
-            </button>
-            <button className='absolute top-[30%] left-[41.75%] -translate-x-[50%] -translate-y-[50%] rounded-full p-3 px-6 border border-[#274552] bg-[#0e171b] flex items-center justify-center gap-2 transition-custom hover:text-[#0e171b] hover:border-[#89bcd2] hover:bg-[#89bcd2] hover:shadow-contactLinks' style={{transform: `translate(calc(${translateXState}px - 50%), calc(${translateYState}px - 50%))`}}>
+            </Link>
+            <Link href={'mailto:harshgoel2004@gmail.com'} className='absolute top-[30%] left-[41.75%] -translate-x-[50%] -translate-y-[50%] rounded-full p-3 px-6 border border-[#274552] bg-[#0e171b] flex items-center justify-center gap-2 transition-custom hover:text-[#0e171b] hover:border-[#89bcd2] hover:bg-[#89bcd2] hover:shadow-contactLinks' style={{transform: `translate(calc(${translateXState}px - 50%), calc(${translateYState}px - 50%))`}}>
                 <Mail size={20}/>
                 E-Mail
-            </button>
-            <button className='absolute top-[30%] left-[60%] -translate-x-[50%] -translate-y-[50%] rounded-full p-3 px-6 border border-[#274552] bg-[#0e171b] flex items-center justify-center gap-2 transition-custom hover:text-[#0e171b] hover:border-[#89bcd2] hover:bg-[#89bcd2] hover:shadow-contactLinks inset' style={{transform: `translate(calc(${translateXState}px - 50%), calc(${translateYState}px - 50%))`}}>
+            </Link>
+            <Link href={''} className='absolute top-[30%] left-[60%] -translate-x-[50%] -translate-y-[50%] rounded-full p-3 px-6 border border-[#274552] bg-[#0e171b] flex items-center justify-center gap-2 transition-custom hover:text-[#0e171b] hover:border-[#89bcd2] hover:bg-[#89bcd2] hover:shadow-contactLinks inset' style={{transform: `translate(calc(${translateXState}px - 50%), calc(${translateYState}px - 50%))`}}>
                 <p className='text-sm font-bold'>Ez</p>
                 Ezfolio
-            </button>
-            <button className='absolute top-[35%] left-[75%] -translate-x-[50%] -translate-y-[50%] rounded-full p-3 px-6 border border-[#274552] bg-[#0e171b] flex items-center justify-center gap-2 transition-custom hover:text-[#0e171b] hover:border-[#89bcd2] hover:bg-[#89bcd2] hover:shadow-contactLinks' style={{transform: `translate(calc(${translateXState}px - 50%), ${translateYState}px)`}}>
+            </Link>
+            <Link href={'https://www.upwork.com/freelancers/~01f93471d93f0593d0?mp_source=share'} className='absolute top-[35%] left-[75%] -translate-x-[50%] -translate-y-[50%] rounded-full p-3 px-6 border border-[#274552] bg-[#0e171b] flex items-center justify-center gap-2 transition-custom hover:text-[#0e171b] hover:border-[#89bcd2] hover:bg-[#89bcd2] hover:shadow-contactLinks' style={{transform: `translate(calc(${translateXState}px - 50%), ${translateYState}px)`}}>
                 <FaSquareUpwork size={20}/>
                 Upwork
-            </button>
+            </Link>
         </div>
     </div>
   )
