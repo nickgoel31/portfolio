@@ -1,4 +1,4 @@
-"use client"
+
 import ProjectShowcase from '@/components/projects/project-showcase'
 import ProjectsFiles from '@/components/projects/projects-files'
 import ThreeDimensionCanvas from '@/components/projects/three-d-canvas'

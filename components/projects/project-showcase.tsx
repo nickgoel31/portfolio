@@ -36,12 +36,12 @@ const ProjectShowcase = () => {
             try {
                 const response: GitHubResponse = await axios.get(`https://api.github.com/repos/nickgoel31/${repo}/commits`, {
                     headers: {
-                        Authorization: `token ${process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN}`
+                        Authorization: `token ${process.env.GITHUB_ACCESS_TOKEN}`
                     }
                 });
                 const responseTwo: GitHubResponse = await axios.get(`https://api.github.com/repos/nickgoel31/${repo}/contents`, {
                     headers: {
-                        Authorization: `token ${process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN}`
+                        Authorization: `token ${process.env.GITHUB_ACCESS_TOKEN}`
                     }
                 });
                 if (!response || !responseTwo) return;
@@ -126,7 +126,13 @@ const ProjectShowcase = () => {
                                 </>
                         </div>
                         {!repoData ? (
-                            <></>
+                            <>
+                                <div className='w-full h-full flex items-center justify-center'>
+                                    <p className='text-xs font-medium opacity-70 text-center px-20'>
+                                        Couldn&apos;t fetch Repository Data. This might be due to Github auto expiration of access tokens. Please try again later. 
+                                    </p>
+                                </div>
+                            </>
                         ):(
                             <>
                                 { repoData?.length === 0 ? "No Files": (

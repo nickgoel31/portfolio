@@ -9,6 +9,19 @@ export type ProjectType = {
     status: "IN DEVELOPMENT" | "COMPLETED" 
 }
 
+export type DBProjectType = {
+  
+  _id: string
+  title: string
+  index: number,
+  top: string
+  zIndex: string,
+  projectLink:string,
+  projectGithub:string,
+  projectVideoPath:string,
+  status: 'COMPLETED' | 'IN DEVELOPMENT' | 'ON HOLD' | 'PLANNED'
+
+}
 // types/github.d.ts
 export interface GitHubRepo {
     id: number;
