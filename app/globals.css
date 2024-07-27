@@ -58,3 +58,25 @@ body {
 .skill-mobile-showcase-div > div:nth-child(even){
   justify-content: end;
 }
+
+.skill-mobile-showcase-div > div:nth-child(odd){
+  justify-content: start;
+}
+
+
+/* desktop */
+/* Default alignment for all items */
+.skill-desktop-showcase-div > div:nth-child(4n-3){
+  justify-content: start; /* Default alignment */
+}
+
+/* Every 3rd child item should be aligned to end */
+.skill-desktop-showcase-div > div:nth-child(2n){
+  justify-content: center; /* Default alignment */
+}
+
+/* Every 2nd child item, except those aligned to end, should be aligned to center */
+.skill-desktop-showcase-div > div:nth-child(4n-1){
+  justify-content: end; /* Default alignment */
+}
+

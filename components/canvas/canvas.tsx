@@ -2,6 +2,7 @@
 
 import { useMouse } from '@/contexts/mouse-context';
 import { skillBoxes } from '@/data';
+import Image from 'next/image';
 import React, { HTMLAttributes, useEffect, useRef, useState } from 'react';
 
 
@@ -137,6 +138,9 @@ if (canvas) {
       />
       {selectedElement && (
         <div className='fixed right-8 top-8  bottom-8 p-6 w-64 border border-[#3f7479] rounded-md bg-[#090d0e] select-none flex flex-col gap-5'>
+          <div className='flex items-center gap-2'>
+            <Image src={skillBoxes.find(skill => skill.id === selectedElement)?.logoImage || ""} alt='' className='w-fit h-10 grayscale invert' width={500} height={500} />
+          </div>
           <p className='text-3xl font-bold'>{skillBoxes.find(skill => skill.id === selectedElement)?.text}</p>
           <p className='opacity-80 text-sm'>{skillBoxes.find(skill => skill.id === selectedElement)?.information}</p>
         </div>

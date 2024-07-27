@@ -12,7 +12,7 @@ type Props = {
   bottom?: number,
   className?: string,
   skillName: string,
-  skillLevel?:"beginner" | "intermediate" | "advanced" | "expert",
+  skillLevel?:"beginner" | "intermediate" | "advanced" | "expert" | string,
   skillLogo?:string,
   skillIcon?: LucideIcon | IconType,
   skillDesc?:string
@@ -49,7 +49,7 @@ export const SkillBox = ({...props}:Props) => {
           </div> */}
           <div className='w-28 h-28 p-3.5 overflow-hidden  bg-[#2d454750] backdrop-blur-xl rounded-lg uppercase font-bold flex items-end justify-end relative'>
             {!props.skillLogo && <p className={`text-[#DFFAFF50] [text-shadow:_0px_0px_10px_#81c7d270] line-clamp-1 text-ellipsis ${props.skillName.length <= 3 ? 'text-5xl' : props.skillName.length <= 4 ? 'text-3xl' : props.skillName.length <= 5 ? 'text-2xl': 'text-xl'}`}>{props.skillName}</p>}
-            {props.skillLogo && (<Image src={props.skillLogo} alt={props.skillName} width={1000} height={1000} objectFit="contain" className=" w-12 rounded-md grayscale opacity-30" />)}
+            {props.skillLogo && (<Image src={props.skillLogo} alt={props.skillName} width={1000} height={1000} objectFit="contain" className=" w-12 rounded-md grayscale invert opacity-30" />)}
           </div>
         </div>
       </>

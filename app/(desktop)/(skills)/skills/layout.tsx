@@ -10,7 +10,7 @@ const ProjectsLayout = ({
   }>) => {
   return (
     <ProjectContextProvider>
-      <div className='bg-[#0A0F10] w-full h-screen overflow-hidden relative md:block hidden'>
+      <div className='bg-[#0A0F10] w-full min-h-screen relative md:block hidden'>
           <NavbarHorizontal />
           {children}
       </div>
